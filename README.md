@@ -33,9 +33,9 @@ Plugin_HTTPAttempts.shは、以下の機能を持ちます。
 git clone https://github.com/11ppm/Plugin_HTTPAttempts
 ```
 
-3. `Plugin_from_5_to_2`ディレクトリに移動します
+3. `Plugin_HTTPAttempts`ディレクトリに移動します
 ```sh
-cd Plugin_from_5_to_2
+cd Plugin_HTTPAttempts
 ```
 
 4. Plugin_HTTPAttempts.sh ファイルに実行権限を付与します
