@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="./img/img1.jpg" width="225" alt="Plugin logo">
+<img src="./img/img2.jpg" width="225" alt="PluginJapan">
 </a>
 </p>
 <br/>
