@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="https://github.com/GoPlugin/Plugin/blob/main/docs/plugin.png" width="225" alt="Plugin logo">
+<img src="./img/img1.jpg" width="225" alt="Plugin logo">
 </a>
 </p>
 <br/>
