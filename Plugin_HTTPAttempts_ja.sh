@@ -71,7 +71,7 @@ echo -e "${YELLOW}       環境によっては5分ほどかかります。終わ
 echo -e "${YELLOW}--------------------------------------------------------------------------------${NC}"
 echo
 sleep 5
-# make install
+make install
 
 # pm2 reset & start & list
 pm2 start $PM2_MAIN_PROCESS
