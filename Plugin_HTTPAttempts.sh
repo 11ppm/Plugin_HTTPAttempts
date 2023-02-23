@@ -72,7 +72,7 @@ echo -e "${YELLOW} Please do not do anything until it's finished."
 echo -e "${YELLOW}--------------------------------------------------------------------------------${NC}"
 echo
 sleep 5
-# make install
+make install
 
 # pm2 reset & start & list
 pm2 start $PM2_MAIN_PROCESS
