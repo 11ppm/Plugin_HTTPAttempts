@@ -1,3 +1,10 @@
+<br/>
+<p align="center">
+<img src="https://github.com/GoPlugin/Plugin/blob/main/docs/plugin.png" width="225" alt="Plugin logo">
+</a>
+</p>
+<br/>
+
 # Plugin_HTTPAttempts
 
 このスクリプトは、`schema.go` ファイルを編集し、DefaultMaxHTTPAttempts の値を `2` に変更することです。APIからデータを失わないように留意して、`5`回試行されていましたが、`2`回に減らすことになりました。詳しくは以下を参照してください。
