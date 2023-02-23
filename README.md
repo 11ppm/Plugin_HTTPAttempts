@@ -1,15 +1,15 @@
-# Plugin_from_5_to_2
+# Plugin_HTTPAttempts
 
-このスクリプトは、特定の schema.go ファイルを編集し、必要に応じて Node.js のバージョンを変更してから、特定のプラグインの更新を行うために使用されます。
+このスクリプトは、特定の `schema.go` ファイルを編集し、必要に応じて `Node.js` のバージョンを変更してから、特定のプラグインの更新を行うために使用されます。
 
-API からデータを失わないように留意して、5回試行されていましたが、2回に減らすことになりました。
+API からデータを失わないように留意して、5回試行されていましたが、2回に減らすことになりました。詳しくは以下を参照してください。
 
+ [Plugin](https://github.com/GoPlugin/Plugin)
 
-https://github.com/GoPlugin/Plugin
 
 
 ## 機能
-Plugin_FROM_5_TO_2.shは、以下の機能を持ちます。
+Plugin_HTTPAttempts.shは、以下の機能を持ちます。
 
 1. 現在の`Node.js`のバージョンを確認します。PluginNodeのデフォルトである`v15.14.0`とは異なる場合、`nvm` を使用してバージョンを `v15.14.0` に変更します。
 3. スクリプトで `schema.go` ファイルを編集します。編集する項目は、DefaultMaxHTTPAttempts の値を `2` に変更することです。
@@ -26,7 +26,7 @@ Plugin_FROM_5_TO_2.shは、以下の機能を持ちます。
 ## 注意事項
 * このスクリプトを使用する前に、バックアップを作成することをお勧めします。
 * メインプロセスの名前は、`2_nodeStartPM2` または `[sS]tart[nN]ode` である必要があります。これらのプロセス名が見つからない場合、スクリプトはエラーで終了します。
-* スクリプトは`./Plugin_FROM_5_TO_2.sh` だけで実行すると、でシェルスクリプトのプロセス内だけで有効で、シェルスクリプトが終了すると変更は破棄されます。`source ./Plugin_FROM_5_TO_2.sh`を実行することで、`Node.js`のバージョンがPluginNodeのデフォルトである`v15.14.0`になります。もし異なるバージョンを使用したい場合は、`nvm use <version>`を実行してください。
+* スクリプトは`./Plugin_HTTPAttempts.sh` だけで実行すると、でシェルスクリプトのプロセス内だけで有効で、シェルスクリプトが終了すると変更は破棄されます。`source ./Plugin_HTTPAttempts.sh`を実行することで、`Node.js`のバージョンがPluginNodeのデフォルトである`v15.14.0`になります。もし`v15.14.0`ではなく、すでに実行しているバージョンを使用したい場合は、以下を実行してください。
 
 ## 実行コマンド
 以下のコマンドを使用して、このスクリプトを実行することができます。
@@ -43,21 +43,23 @@ git clone https://github.com/11ppm/Plugin_from_5_to_2.git
 cd Plugin_from_5_to_2
 ```
 
-4. Plugin_FROM_5_TO_2.sh ファイルに実行権限を付与します。
+4. Plugin_HTTPAttempts.sh ファイルに実行権限を付与します。
 ```sh
-chmod +x Plugin_FROM_5_TO_2.sh
+chmod +x Plugin_HTTPAttempts.sh
 ```
 
 5. source コマンドを使用して、シェルスクリプトを実行します。`./`は必ずつけてください。
 ```sh
-source ./Plugin_FROM_5_TO_2.sh
+source ./Plugin_HTTPAttempts.sh
 ```
 
 ## 重要
-* スクリプトは`./Plugin_FROM_5_TO_2.sh` だけで実行すると、でシェルスクリプトのプロセス内だけで有効で、シェルスクリプトが終了すると変更は破棄されます。`source ./Plugin_FROM_5_TO_2.sh`を実行することで、`Node.js`のバージョンがPluginNodeのデフォルトである`v15.14.0`になります。もし`v15.14.0`ではなく、すでに実行しているバージョンを使用したい場合は、以下を実行してください。
+* スクリプトは`./Plugin_HTTPAttempts.sh` だけで実行すると、でシェルスクリプトのプロセス内だけで有効で、シェルスクリプトが終了すると変更は破棄されます。`source ./Plugin_HTTPAttempts.sh`を実行することで、`Node.js`のバージョンがPluginNodeのデフォルトである`v15.14.0`になります。もし`v15.14.0`ではなく、すでに実行しているバージョンを使用したい場合は、以下を実行してください。
 
 ```sh:5-b
-./Plugin_FROM_5_TO_2.sh
+./Plugin_HTTPAttempts.sh
 ```
 
+# Author
 
+* @11ppm
