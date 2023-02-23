@@ -33,7 +33,7 @@ Plugin_HTTPAttempts.shは、以下の機能を持ちます。
 git clone https://github.com/11ppm/Plugin_HTTPAttempts
 ```
 
-3. `Plugin_HTTPAttempts`ディレクトリに移動します
+3. Plugin_HTTPAttemptsディレクトリに移動します
 ```sh
 cd Plugin_HTTPAttempts
 ```
