@@ -17,20 +17,20 @@ This repository is for editing the `schema.go` file and changing the value of `D
 Plugin_HTTPAttempts.sh has the following features.
 
 1. Check the current version of `Node.js`. If it is different from the default of `PluginNode`, which is `v15.14.0`, change the version to `v15.14.0` using nvm.
-2. Edit the `schema.go` file in the script. The item to be edited is to change the value of `DefaultMaxHTTPAttempts` to `2`.
+2. Edit the `schema.go` file in the script. The item to be edited is to change the value of `DefaultMaxHTTPAttempts` from `5` to `2`.
 3. Stop the main process using `pm2` and load the `profile`.
 4. Install the `Plugin` using `make install`.
 
 ## Requirements
 Before using this script, you need to meet the following requirements.
 * You can switch the version of `Node.js` using `nvm`.
-* `pm2` is installed and the necessary scripts for managing `PluginNode` can be executed.
+* `PM2` is installed and the necessary scripts for managing PluginNode can be executed.
 * Make sure that the path to the `schema.go` file used in the script is correct. By default, the path is `~/plugin-deployment/Plugin/core/store/orm/schema.go`.
 
 ## Notes
 * It is recommended to create a backup before using this script.
 * The name of the main process must be `2_nodeStartPM2` or `[sS]tart[nN]ode`. If these process names are not found, the script will exit with an error.
-* If you run the script with only `./Plugin_HTTPAttempts.sh`, the version of `Node.js` will only be valid within the shell script process and changes will be discarded when the shell script is exited. By running `source ./Plugin_HTTPAttempts.sh`, the version of `Node.js` will be the default of `PluginNode`, which is `v15.14.0`.
+* If you run the script with only `./Plugin_HTTPAttempts.sh`, the version of Node.js will only be valid within the shell script process and changes will be discarded when the shell script is exited. By running `source ./Plugin_HTTPAttempts.sh`, the version of Node.js will be the default of PluginNode, which is `v15.14.0`.
 
 ## Execution command
 You can run this script using the following command:
@@ -42,12 +42,12 @@ You can run this script using the following command:
 git clone https://github.com/11ppm/Plugin_HTTPAttempts
 ```
 
-3. Move to the Plugin_HTTPAttempts directory:
+3. Move to the `Plugin_HTTPAttempts` directory:
 ```sh
 cd Plugin_HTTPAttempts
 ```
 
-4. Give execution permission to the Plugin_HTTPAttempts.sh file:
+4. Give execution permission to the `Plugin_HTTPAttempts.sh` file:
 sh
 ```sh
 chmod +x Plugin_HTTPAttempts.sh
@@ -59,7 +59,8 @@ source ./Plugin_HTTPAttempts.sh
 ```
 
 ## Important
-* If you run the script with only `./Plugin_HTTPAttempts.sh`, the version of `Node.js` will only be valid within the shell script process and changes will be discarded when the shell script is exited. By running `source ./Plugin_HTTPAttempts.sh`, the version of `Node.js` will be the default of `PluginNode`, which is `v15.14.0`. If you are already running a version other than `v15.14.0`, be sure to change it to `v15.14.0` before running the script.
+* If you run the script with only `./Plugin_HTTPAttempts.sh`, the version of Node.js will only be valid within the shell script process and changes will be discarded when the shell script is exited. By running `source ./Plugin_HTTPAttempts.sh`, the version of Node.js will be the default of PluginNode, which is `v15.14.0`. 
+* If you are already running a version other than v15.14.0 and you want to maintain that version, you can either run ./Plugin_HTTPAttempts.sh without using the source command, or run nvm use <version> after the shell script has exited.
 
 ```sh
 ./Plugin_HTTPAttempts.sh
